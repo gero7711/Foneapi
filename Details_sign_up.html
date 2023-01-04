@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Details_signup</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <style>
+.container{
+  margin-top: 50px;
+
+}
+.form-group{
+  margin-top: 20px;
+}
+
+.btn{
+  border:none;
+  color: white;
+  width: 3in;
+}
+.success{
+  background-color: #04AA6D;  
+}
+.success:hover{ background-color: #46a049;
+  color: white;
+}
+.box{
+  height: 200px;
+  width: 350px;
+  border: 1px solid gray;
+  margin-left: 30px;
+}
+#picture_space{
+margin-left: 100px;
+margin-top: 200px;
+}
+
+    </style>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container pt-2 pb-3">
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="col">
+          <form>
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="form-control" id="Name" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <label>Birth Date:</label>
+              <input type="date" class="form-control" id="birthdate" placeholder="Birthday">
+            </div>
+              <div class="form-group">
+                <label>Address:</label>
+                <input type="text" class="form-control" id="address" placeholder="Street/Province/Municipality">
+              </div>
+        
+              <div class="form-group">
+                <label>Contact No:</label>
+                <input type="number" class="form-control" id="contact" placeholder="(+63)">
+              </div>
+              <div class="form-group">
+                <label>Email Address:</label>
+                <input type="email" class="form-control" id="email" placeholder="gmail">
+              </div>
+              <div class="form-group">
+                <button class="btn success" id="button">Sign up</button>
+              </div>
+          </form>
+        </div>
+        <div class="col">
+          <input type="file" id="picture_space">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+
+    const jname = document.getElementById("Name");
+    const jbirthdate = document.getElementById("birthdate");
+    const jaddress = document.getElementById("address");
+    const jcontact = document.getElementById("contact");
+    const jemail = document.getElementById("email");
+    const button = document.getElementById("button");
+
+    function click_detail(){
+      Full_name.innerHTML =  jname.value;
+      birth_spacing.innerHTML = jbirthdate.value;
+      address_space.innerHTML = jaddress.value;
+      contact_space.innerHTML = jcontact.value;
+      email_space.innerHTML = jemail.value;
+
+    }
+
+    button.addEventListener('click',click_detail)
+
+
+
+
+  </script>
+</body>
+
+</html>
